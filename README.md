@@ -1,50 +1,53 @@
-# Welcome to your Expo app 👋
+O StudyDash é um aplicativo desenvolvido em React Native com Expo, voltado à visualização e gerenciamento de dados educacionais de forma prática e intuitiva.
+A navegação entre telas é realizada através do Expo Router Drawer, garantindo fluidez e uma experiência de uso moderna.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+O projeto foi criado com foco em demonstrar a integração entre armazenamento local, componentização funcional e visualização gráfica de dados, utilizando tecnologias amplamente adotadas no ecossistema React Native.
 
-## Get started
+ Tecnologias e bibliotecas principais
 
-1. Install dependencies
+Expo Router Drawer: responsável pela navegação entre as telas Home, Dashboards e Perfil do Usuário.
 
-   ```bash
-   npm install
-   ```
+AsyncStorage e useState: usados na tela de Perfil para armazenar e gerenciar localmente as informações do usuário (nome, e-mail, curso e turma), garantindo persistência entre sessões.
 
-2. Start the app
+React Native Gifted Charts / SVG Charts: baseados no repositório react-native-svg-charts
+, implementam visualizações de dados com gráficos de barras, pizza e área.
 
-   ```bash
-   npx expo start
-   ```
+Expo Linear Gradient: aplicado para realçar elementos visuais nos gráficos e na interface geral.
 
-In the output, you'll find options to open the app in a
+React Hooks: usados para controle de estado, callbacks e memorização de dados, otimizando a performance e a experiência de navegação.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+ Estrutura e funcionalidades
+ **Home
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Apresenta os principais painéis de forma descritiva e informativa, servindo como ponto de partida do usuário.
+Exibe o logotipo do sistema e uma breve explicação dos dashboards disponíveis.
 
-## Get a fresh project
+*Dashboards
 
-When you're ready, run:
+Reúne diferentes tipos de gráficos para representar indicadores de cursos, baseados em dados ilustrativos:
 
-```bash
-npm run reset-project
-```
+Cursos mais Populares: gráfico de pizza que simula os cursos mais acessados.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Conclusões x Desistências: gráfico de área comparando engajamento e evasão.
 
-## Learn more
+Nível de Dificuldade: gráfico de barras agrupando acessos por nível (Básico, Intermediário, Avançado).
 
-To learn more about developing your project with Expo, look at the following resources:
+Cursos por Categoria: gráfico de pizza filtrável por áreas (Dev, Mobile, Data, Design).
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Essas seções exemplificam como integrar componentes de visualização dinâmica com dados educacionais.
 
-## Join the community
+*Perfil do Usuário
 
-Join our community of developers creating universal apps.
+Permite ao usuário inserir, salvar e editar suas informações.
+Os dados são armazenados no AsyncStorage, permanecendo disponíveis mesmo após fechar o aplicativo.
+Inclui botões para salvar e limpar o perfil local, com feedback visual e alertas de confirmação.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+*Objetivo do projeto
+
+Demonstrar de forma prática:
+
+O uso do Expo Router Drawer para navegação hierárquica.
+
+A aplicação de Hooks e AsyncStorage em contexto real.
+
+A integração entre interfaces reativas e gráficos interativos no ambiente mobile.
